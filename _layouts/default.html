@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="{{ site.lang }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&display=swap">
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  <link rel="icon" href="{{ '/assets/favicon.svg' | relative_url }}" type="image/svg+xml">
+  {% feed_meta %}
+  {% seo %}
+</head>
+<body>
+  <a class="saltar" href="#contenido">Saltar al contenido</a>
+
+  <header class="cabecera">
+    <a class="marca" href="{{ '/' | relative_url }}">{{ site.title }}</a>
+    <nav aria-label="Principal">
+      <a href="{{ '/etiquetas/' | relative_url }}"{% if page.url == '/etiquetas/' %} aria-current="page"{% endif %}>Etiquetas</a>
+      <a href="{{ '/sobre-mi/' | relative_url }}"{% if page.url == '/sobre-mi/' %} aria-current="page"{% endif %}>Sobre mí</a>
+    </nav>
+  </header>
+
+  <main id="contenido">
+    {{ content }}
+  </main>
+
+  <footer class="pie">
+    <span>© {{ site.time | date: '%Y' }} {{ site.author }}</span>
+    <a href="{{ '/feed.xml' | relative_url }}">RSS</a>
+  </footer>
+</body>
+</html>

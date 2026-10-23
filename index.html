@@ -1,0 +1,26 @@
+---
+layout: default
+---
+<section class="intro">
+  <h1>{{ site.title }}</h1>
+  <p>{{ site.description }}</p>
+</section>
+
+{% assign por_anio = site.posts | group_by_exp: "post", "post.date | date: '%Y'" %}
+{% for anio in por_anio %}
+<section class="grupo" aria-labelledby="anio-{{ anio.name }}">
+  <h2 id="anio-{{ anio.name }}">{{ anio.name }}</h2>
+  <ul class="lista">
+    {% for post in anio.items %}
+    <li>
+      <a href="{{ post.url | relative_url }}">
+        <span class="titulo">{{ post.title }}</span>
+        <time datetime="{{ post.date | date_to_xmlschema }}">{% include fecha-corta.html fecha=post.date %}</time>
+      </a>
+    </li>
+    {% endfor %}
+  </ul>
+</section>
+{% else %}
+<p class="vacio">Todavía no hay entradas. Pronto.</p>
+{% endfor %}

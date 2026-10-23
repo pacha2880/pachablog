@@ -1,0 +1,3 @@
+{%- assign palabras = include.contenido | strip_html | number_of_words -%}
+{%- assign minutos = palabras | divided_by: site.palabras_por_minuto | at_least: 1 -%}
+{{- minutos }} min de lectura

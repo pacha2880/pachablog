@@ -1,0 +1,37 @@
+title: Pachablog
+description: Blog personal de pacha2880
+author: Rodrigo Salguero
+lang: es
+url: https://pacha2880.github.io
+baseurl: /pachablog
+timezone: America/La_Paz
+permalink: /:year/:month/:title/
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+feed:
+  path: feed.xml
+
+# Jekyll no traduce fechas, así que usamos estas listas
+meses: [enero, febrero, marzo, abril, mayo, junio, julio, agosto, septiembre, octubre, noviembre, diciembre]
+meses_cortos: [ene, feb, mar, abr, may, jun, jul, ago, sep, oct, nov, dic]
+
+# Palabras por minuto para calcular el tiempo de lectura
+palabras_por_minuto: 200
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+
+exclude:
+  - README.md

@@ -1,0 +1,37 @@
+---
+layout: default
+title: Etiquetas
+permalink: /etiquetas/
+---
+<article class="entrada">
+  <header>
+    <h1>Etiquetas</h1>
+  </header>
+
+  {% assign etiquetas = site.tags | sort %}
+  {% if etiquetas.size > 0 %}
+  <p class="etiquetas nube">
+    {% for etiqueta in etiquetas %}
+    <a href="#{{ etiqueta[0] | slugify }}">#{{ etiqueta[0] }} <span>{{ etiqueta[1].size }}</span></a>
+    {% endfor %}
+  </p>
+
+  {% for etiqueta in etiquetas %}
+  <section class="grupo" id="{{ etiqueta[0] | slugify }}">
+    <h2>#{{ etiqueta[0] }}</h2>
+    <ul class="lista">
+      {% for post in etiqueta[1] %}
+      <li>
+        <a href="{{ post.url | relative_url }}">
+          <span class="titulo">{{ post.title }}</span>
+          <time datetime="{{ post.date | date_to_xmlschema }}">{% include fecha-corta.html fecha=post.date anio=true %}</time>
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
+  {% endfor %}
+  {% else %}
+  <p class="vacio">Aún no hay etiquetas.</p>
+  {% endif %}
+</article>

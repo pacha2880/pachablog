@@ -1,0 +1,2 @@
+{%- assign m = include.fecha | date: "%-m" | minus: 1 -%}
+{{- include.fecha | date: "%-d" }} {{ site.meses_cortos[m] }}{% if include.anio %} {{ include.fecha | date: "%Y" }}{% endif -%}
