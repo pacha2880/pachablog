@@ -30,6 +30,8 @@ La entrada `_posts/2026-10-22-guia-de-formato.md` muestra todo el formato dispon
 
 Súbelas a `assets/img/` y úsalas así: `![descripción](/pachablog/assets/img/foto.jpg)`.
 
+Al compartir un enlace en un chat se muestra `assets/img/logo.jpg`. Para que una entrada muestre otra imagen, agrega `image: /assets/img/foto.jpg` a su encabezado.
+
 ## Visitas
 
 Las cuenta [GoatCounter](https://pacha2880.goatcounter.com). El código está en `goatcounter` dentro de `_config.yml`; bórralo para quitar los contadores. Un contador sin datos no se muestra.

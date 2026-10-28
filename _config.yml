@@ -30,7 +30,18 @@ goatcounter: pacha2880
 # Palabras por minuto para calcular el tiempo de lectura
 palabras_por_minuto: 200
 
+# Imagen de vista previa al compartir un enlace (cada entrada puede poner su propia `image:`)
+twitter:
+  card: summary
+
 defaults:
+  - scope:
+      path: ""
+    values:
+      image:
+        path: /assets/img/logo.jpg
+        width: 512
+        height: 512
   - scope:
       path: ""
       type: posts
