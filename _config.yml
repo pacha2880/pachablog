@@ -23,6 +23,9 @@ feed:
 meses: [enero, febrero, marzo, abril, mayo, junio, julio, agosto, septiembre, octubre, noviembre, diciembre]
 meses_cortos: [ene, feb, mar, abr, may, jun, jul, ago, sep, oct, nov, dic]
 
+# Código de GoatCounter (pacha2880.goatcounter.com) para contar visitas
+goatcounter: pacha2880
+
 # Palabras por minuto para calcular el tiempo de lectura
 palabras_por_minuto: 200
 

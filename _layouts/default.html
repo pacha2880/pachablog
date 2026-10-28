@@ -28,8 +28,10 @@
   </main>
 
   <footer class="pie">
-    <span>© {{ site.time | date: '%Y' }} {{ site.author }}</span>
+    <span>© {{ site.time | date: '%Y' }} {{ site.author }} {% include visitas.html ruta="TOTAL" uno="visita" varios="visitas" %}</span>
     <a href="{{ '/feed.xml' | relative_url }}">RSS</a>
   </footer>
+
+  {% include goatcounter.html %}
 </body>
 </html>

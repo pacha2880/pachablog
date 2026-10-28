@@ -28,6 +28,10 @@ La entrada `_posts/2026-10-22-guia-de-formato.md` muestra todo el formato dispon
 
 Súbelas a `assets/img/` y úsalas así: `![descripción](/pachablog/assets/img/foto.jpg)`.
 
+## Visitas
+
+Las cuenta [GoatCounter](https://pacha2880.goatcounter.com). El código está en `goatcounter` dentro de `_config.yml`; bórralo para quitar los contadores. Un contador sin datos no se muestra.
+
 ## Cambiar textos
 
 - Título, subtítulo y autor: `_config.yml`

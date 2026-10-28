@@ -15,7 +15,10 @@ layout: default
     <li>
       <a href="{{ post.url | relative_url }}">
         <span class="titulo">{{ post.title }}</span>
-        <time datetime="{{ post.date | date_to_xmlschema }}">{% include fecha-corta.html fecha=post.date %}</time>
+        <span class="datos">
+          <time datetime="{{ post.date | date_to_xmlschema }}">{% include fecha-corta.html fecha=post.date %}</time>
+          {% include visitas.html ruta=post.url %}
+        </span>
       </a>
     </li>
     {% endfor %}

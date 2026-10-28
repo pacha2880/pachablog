@@ -8,6 +8,7 @@ layout: default
       <time datetime="{{ page.date | date_to_xmlschema }}">{% include fecha.html fecha=page.date %}</time>
       <span aria-hidden="true">·</span>
       {% include lectura.html contenido=content %}
+      {% include visitas.html ruta=page.url %}
     </p>
   </header>
 

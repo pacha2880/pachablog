@@ -1,0 +1,21 @@
+{%- if site.goatcounter -%}
+<script data-goatcounter="https://{{ site.goatcounter }}.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+<script>
+  // Rellena cada contador con su número; si falla o es cero, sigue oculto
+  (function () {
+    var base = 'https://{{ site.goatcounter }}.goatcounter.com/counter/';
+    document.querySelectorAll('[data-visitas]').forEach(function (el) {
+      fetch(base + encodeURIComponent(el.dataset.visitas) + '.json')
+        .then(function (r) { return r.ok ? r.json() : null; })
+        .then(function (datos) {
+          var n = datos && parseInt(String(datos.count).replace(/\D/g, ''), 10);
+          if (!n) return;
+          el.querySelector('.numero').textContent =
+            n.toLocaleString('es') + ' ' + (n === 1 ? el.dataset.uno : el.dataset.varios);
+          el.hidden = false;
+        })
+        .catch(function () {});
+    });
+  })();
+</script>
+{%- endif -%}

@@ -1,0 +1,8 @@
+{%- comment -%}
+  Contador de visitas de GoatCounter. Queda oculto hasta que llega el número.
+  ruta: "TOTAL" o la URL de una página. uno / varios: palabra en singular y plural.
+{%- endcomment -%}
+{%- if site.goatcounter -%}
+{%- if include.ruta == "TOTAL" -%}{%- assign ruta = "TOTAL" -%}{%- else -%}{%- assign ruta = include.ruta | relative_url -%}{%- endif -%}
+<span class="visitas" data-visitas="{{ ruta }}" data-uno="{{ include.uno | default: 'lectura' }}" data-varios="{{ include.varios | default: 'lecturas' }}" hidden><span aria-hidden="true">·</span> <span class="numero"></span></span>
+{%- endif -%}

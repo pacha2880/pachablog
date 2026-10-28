@@ -152,7 +152,7 @@ a { color: var(--acento); }
 .lista .titulo { transition: color 0.15s; }
 .lista a:hover .titulo { color: var(--acento); }
 
-.lista time {
+.lista .datos {
   color: var(--suave);
   font-size: 0.95rem;
   white-space: nowrap;
@@ -160,6 +160,13 @@ a { color: var(--acento); }
 }
 
 .vacio { color: var(--suave); font-style: italic; }
+
+/* Contadores de visitas: aparecen suavemente cuando llega el número */
+.visitas { animation: aparecer 0.4s ease-out; }
+@keyframes aparecer { from { opacity: 0; } }
+@media (prefers-reduced-motion: reduce) {
+  .visitas { animation: none; }
+}
 
 /* Entrada */
 .entrada > header { margin: 3rem 0 2rem; }
