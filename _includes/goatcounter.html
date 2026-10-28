@@ -1,11 +1,13 @@
 {%- if site.goatcounter -%}
 <script data-goatcounter="https://{{ site.goatcounter }}.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 <script>
-  // Rellena cada contador con su número; si falla o es cero, sigue oculto
+  // Rellena cada contador con su número; si falla o es cero, sigue oculto.
+  // GoatCounter guarda las rutas sin la barra final, así que se la quitamos.
   (function () {
     var base = 'https://{{ site.goatcounter }}.goatcounter.com/counter/';
     document.querySelectorAll('[data-visitas]').forEach(function (el) {
-      fetch(base + encodeURIComponent(el.dataset.visitas) + '.json')
+      var ruta = el.dataset.visitas.replace(/(.)\/$/, '$1');
+      fetch(base + encodeURIComponent(ruta) + '.json')
         .then(function (r) { return r.ok ? r.json() : null; })
         .then(function (datos) {
           var n = datos && parseInt(String(datos.count).replace(/\D/g, ''), 10);
