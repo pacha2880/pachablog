@@ -24,7 +24,7 @@ Para Google conviene agregar `description: Una frase que resuma la entrada` al e
 
 Las etiquetas son opcionales; si una es solo un número, ponla entre comillas (`tags: ["2880"]`) o el sitio no se compila. La fecha sale del nombre del archivo; si una entrada no aparece, revisa que la fecha no sea del futuro.
 
-La entrada `_posts/2026-10-22-guia-de-formato.md` muestra todo el formato disponible (títulos, listas, código, tablas, imágenes).
+La entrada `_posts/2026-10-22-guia-de-formato.md` muestra todo el formato disponible (títulos, listas, código, tablas, imágenes). Tiene `published: false`, así que no sale en el blog; se puede ver renderizada en GitHub.
 
 ## Imágenes
 

@@ -2,6 +2,7 @@
 title: Guía rápida de formato
 date: 2026-10-22 20:00:00 -0400
 tags: [personal, guía]
+published: false  # Solo para mí: no se publica en el blog
 ---
 
 Esta entrada muestra todo lo que se puede usar al escribir. Bórrala cuando ya no la necesites.
