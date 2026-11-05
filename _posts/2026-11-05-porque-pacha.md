@@ -1,7 +1,7 @@
 ---
 title: ¿Por qué pacha2880?
 date: 2026-11-05 19:00:00 -0400
-tags: [personal, 2880]
+tags: [personal, "2880"]
 ---
 
 En mi grupo de amigos o grupo de compañeros de programación competitiva muchos se han acostumbrado a llamarme *Pacha*. En un principio era un poco raro, pero ya me he acostumbrado, incluso me gusta y siento que *Pacha* es parte de mi identidad o que mi identidad es parte de *Pacha*.
